@@ -1,0 +1,462 @@
+@media screen and (max-width: 1180px)  {
+.aboutContent {
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    width: 80%;
+}
+.nav {
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    letter-spacing: 1px;
+    padding-top: 60px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.menuother {
+    float: left;
+    font-size: 14px;
+    margin: 0 15px;
+
+}
+
+.logostyle
+{
+    width: 80%;
+}
+.introAbout {
+    width: 90%;
+    display: inline-block;
+    margin: 5%;
+}
+.sectionLI {
+    float: left;
+    margin: 0px;
+    width: 50%;
+     height: 290px;
+}
+
+.marginboth
+{
+    margin-left: 0;
+    margin-top: 0px;
+}
+
+.margintop
+{
+  margin-top: 0px;
+}
+
+.newmarginleft {
+   margin-left: 0;
+}
+
+.studymargin
+{
+    margin-left: 263px;
+    margin-top: -65px;
+}
+.margintopleft
+{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+
+.firstpatner {
+    width: 23%;
+    height: 260px;
+    float: left;
+    margin: 1%;
+}
+.projectimage
+{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    float: left;
+}
+.projectimage img
+{
+    width: 100%;
+    margin: auto;
+    height: auto;
+}
+.projectdetails
+{
+    /* float: left;
+    width: 100%*/
+    float: left;
+    width: 90%;
+    margin: 0 5%;
+   
+}
+
+.projectdetailsbottomleft
+{
+     float: left;
+    width: 90%;
+    margin: 0 5%;
+}
+
+.projectdetailsbottomright
+{
+    float: left;
+    width: 90%;
+    margin: 0 5%;
+}
+.projectdetailsApp
+{
+    float: left;
+    width: 100%;
+    width: 90%;
+    margin: 0 5%;
+}
+
+.allworkLI {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+}
+.patnerLI {
+    float: left;
+    width: 50%;
+    
+}
+
+}
+
+
+@media screen and (max-width: 1065px)  {
+.thirdTab
+{
+    width: 100%;
+    height: 100%;
+}
+#lab{
+    display: none;
+}
+.forthTab {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.mobileSnap{
+    display: block;
+}
+.allpatner{
+    display: none;
+}
+/*.mobilepatner
+{
+    display: block;
+}*/
+
+#newlab
+{
+    display: none;
+}
+.snapClass
+{
+    display: block;
+}
+
+.aboutmodelcontent
+{
+    width: 100%;
+    text-align: left;
+    float: left;
+}
+.aboutmodelimage
+{
+    width: 100%;
+    float: left;
+}
+
+.aboutmodelimage img
+{
+        width: 80%;
+}
+}
+
+
+
+
+@media screen and (max-width: 960px)  {
+
+    .nav
+{
+    display: none;
+}
+.navnew
+{   
+    display: block;
+}
+.navnewLOGO
+{
+    display: block;
+}
+}
+
+@media screen and (max-width: 920px)  {
+#newlab{display: none;}
+.modalDialog > div
+{
+    width: 80%;
+    position: relative;
+    margin: 5% auto;
+    padding: 2px 20px 13px 20px;
+    border-radius: 5px;
+    background: #fff;
+}
+.allworkUL {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 1200px;
+}
+
+}
+
+
+
+
+/* ------------windows size 680------------------*/
+@media screen and (max-width: 680px)
+{
+.introAbout p {
+    margin-top: 1.5em;
+    font-family: "freightsans_regular","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 15px;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 32px;
+    color: #6b6b6b;
+    text-align: center;
+}
+.tagline {
+    font-size: 50px;
+    word-spacing: 1px;
+    line-height: 90px;
+    font-family: "neuzeitgrobold",sans-serif;
+    text-transform: none;
+    letter-spacing: -3px;
+    color: #181818;
+    text-align: center;
+    margin: .95em 0 0;
+    font-weight: bolder;
+}
+.logostyle
+{
+    width: 80%;
+}
+.sectionLI {
+    float: left;
+    margin: 0px;
+    width: 100%;
+    height: 290px;
+}
+.allpatner {
+    width: 50%;
+    height: 345px;
+    margin: auto;
+}
+.firstpatner {
+    width: 100%;
+    height: 260px;
+    float: left;
+    margin-left: 0;
+}
+.patnerHRnew {
+    border-bottom: 1px solid black;
+    margin: auto;
+    color: black;
+    padding-top: 59px;
+    position: absolute;
+    margin-left: 11%;
+}
+.connectTab {
+    float: left;
+    width: 90%;
+    margin: 5%;
+}
+.connectholder {
+    margin: 0;
+    padding: 0;
+   
+    list-style: none;   
+}
+
+
+
+.snapLI {
+    float: left;
+    width: 90%;
+    margin: 5%;
+}
+.snapClassLI
+{
+    float: left;
+   width: 100%;
+}
+.patnerLI
+{
+    float: left;
+    width: 90%;
+    margin:5%;
+}
+.hexagonnewimg
+{   z-index: -1;
+    margin-left: -59px;
+}
+.introLI {
+    float: left;
+    width: 80%;
+    margin: 10%;
+}
+.firstname-container
+{
+    width: 100%;
+}
+.lastname-container
+{
+    width: 100%;
+}
+.email-container
+{
+    width: 100%;
+}
+.phone-container
+{
+    width: 100%;
+}
+.company-container
+{
+    width: 100%;
+}
+
+.textarea-container textarea
+{
+    padding: 0;
+}
+.upload
+{
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
+}
+#demo
+{
+    font-family: Gotham-Book;
+    width: 100%;
+    float: left;
+}
+.modalDialog > div
+{
+    width: 90%;
+    position: relative;
+    margin: 5% auto;
+    padding: 2px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.leftButton1
+{
+    position: absolute;
+    right: 0;
+    top: 500px;
+    -webkit-filter: hue-rotate(100deg);
+    filter: hue-rotate(100deg);
+    z-index: 11;
+}
+.rightButton1
+{
+    position:absolute;
+    left: 0;
+    top: 500px;
+      -webkit-filter: hue-rotate(100deg);
+    filter: hue-rotate(100deg);
+   z-index: 11;
+}
+.leftButton
+{
+    width: 50%;
+}
+.rightButton
+{
+    width: 50%;
+}
+.allworkUL {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 1000px;
+}
+
+}
+
+/* ------------windows size 400------------------*/
+@media screen and (max-width: 400px)  {
+.aboutContent{width: 98%;padding: 0;}
+.tagline {
+    font-size: 40px;
+    word-spacing: 1px;
+    line-height: 40px;
+    font-family: "neuzeitgrobold",sans-serif;
+    text-transform: none;
+    letter-spacing: -3px;
+    color: #181818;
+    text-align: center;
+    margin: .95em 0 0;
+    font-weight: bolder;
+}
+.allpatner {
+    width: 60%;
+    height: 1118px;
+    margin: auto;
+}
+.hexagonnewimg {
+    margin-left: -73px;
+    position: absolute;
+    opacity: 1;
+}
+.patnerHRnew {
+    border-bottom: 1px solid black;
+    margin: auto;
+    color: black;
+    padding-top: 59px;
+    position: absolute;
+    margin-left: 14%;
+
+}
+.faceTwittGoog
+{
+    width: 30px;
+    height: 30px;
+}
+
+}
+@media screen and (max-width: 320px)  {
+.leftButton1
+{
+    position: absolute;
+    right: 0;
+    top: 450px;
+    -webkit-filter: hue-rotate(100deg);
+    filter: hue-rotate(100deg);
+    z-index: 11;
+}
+.rightButton1
+{
+    position:absolute;
+    left: 0;
+    top: 450px;
+      -webkit-filter: hue-rotate(100deg);
+    filter: hue-rotate(100deg);
+   z-index: 11;
+}
+}

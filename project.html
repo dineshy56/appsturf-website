@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<!-- <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Appsturf | Work</title>
+  <meta name="description" content="Appsturf Technologies Pvt Ltd">
+  <link rel="icon" type="image/png" href="images/work/faviconicon.png">
+<link rel="stylesheet" type="text/css" href="style/aboutstyle.css">
+<link rel="stylesheet" type="text/css" href="style/responsiveabout.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<style type="text/css">
+
+
+</style>
+<script type="text/javascript">
+	var slideNumber = 0;
+	var slideDivRemName = "";
+	var slideDivAddName = "";
+	/*
+	function nextPrev(){
+		alert("hello"+slideNumber);
+		slideNumber = slideNumber + 1;
+		//project2
+	}*/
+
+	function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+	var workId = parseInt(getParameterByName('workId')); 
+	
+	if(workId>=1){
+		slideNumber = workId-1;
+		console.log("iffffff");
+	}else{
+		slideNumber = workId;
+		console.log("elseeeee");
+	}
+	console.log(slideNumber+"<<<<");
+	//alert(slideNumber+"slidce");
+
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    nextPrev();
+});
+
+	
+
+
+
+
+ 	/*alert ("Case  is true!");
+
+	if(workId>6){
+		slideNumber = workId;
+
+
+		alert('open page1');
+	}*/
+
+/*
+var baseUrl = (window.location).href; // You can also use document.URL
+var koopId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+//alert(koopId)//503
+
+
+var v = window.location.pathname;
+console.log(v);
+
+
+
+	function slideDivAddName(which){
+	if (!document.getElementById)
+	return
+	if (which.style.display=="block")
+	which.style.display="none"
+	else
+	which.style.display="block"
+	}
+
+alert(koopId+"<<");
+*/
+
+
+/*
+  switch(koopId)
+    {
+    case '1':
+     alert(1);
+    document.getElementById('#project1').style.display="none" 
+  	 break; 
+
+    case '2':
+     alert(2);
+     document.getElementById('#project1').style.display="none" ;
+   document.getElementById('#project2').style.display="block" ;
+ 	break;
+
+ 	 case '3':
+     alert(3);
+   document.getElementById('#project3').style.display="block" 
+ 	break;
+
+ 	 case '4':
+     alert(4);
+   document.getElementById('#project4').style.display="block" 
+ 	break;
+
+ 	 case '5':
+     alert(5);
+   document.getElementById('#project5').style.display="block" 
+ 	break;
+
+ 	 case '6':
+     alert(6);
+   document.getElementById('#project6').style.display="block" 
+ 	break;
+    
+    default:
+  //  document.getElementById('schools').style.display="none"
+  alert(3)
+    }
+
+*/
+
+	function nextPrev(){
+		//alert(slideNumber+"InFun");
+		if(slideNumber>=10)
+		{
+			
+			slideDivRemName = '#project'+slideNumber+' .projectHeading';
+			console.log("Going1>"+slideDivRemName);
+			//$(".projectHeading").animate({opacity: '0.1', left: '-300px'},3000);
+			$(slideDivRemName).animate({opacity: '0', top: '-30px'},500);
+
+			slideDivRemName = '#project'+slideNumber+' .projectimage';
+			$(slideDivRemName).delay(200).animate({opacity: '0', left: '-300px'},600);
+
+			slideDivRemName = '#project'+slideNumber+' .projectdetails';
+			$(slideDivRemName).delay(100).animate({opacity: '0', top: '-50px'},400);
+			//
+
+			slideDivAddName =  '#project1'+' .projectHeading';
+			console.log("Coming2>"+slideDivAddName);
+			$(slideDivAddName).animate({opacity: '0', top: '-30px'},0);
+			$(slideDivAddName).delay(800).animate({opacity: '1', top: '0px'},500);
+
+			slideDivAddName =  '#project1'+' .projectimage';
+			$(slideDivAddName).animate({opacity: '0', left: '300px'},0);
+			$(slideDivAddName).delay(400).animate({opacity: '1', left: '0px'},800);
+
+			slideDivAddName =  '#project1'+' .projectdetails';
+			$(slideDivAddName).animate({opacity: '0', top: '-50px'},0);
+			$(slideDivAddName).delay(800).animate({opacity: '1', top: '0px'},400);
+
+			slideDivAddName = "#project"+1;
+			// formation
+			$(slideDivAddName).css("display", "block");
+
+			slideNumber=1;
+		}
+		else
+		{
+
+			slideDivRemName = '#project'+slideNumber+' .projectHeading';
+			console.log("Going>"+slideDivRemName);
+			//$(".projectHeading").animate({opacity: '0.1', left: '-300px'},3000);
+			$(slideDivRemName).animate({opacity: '0', top: '-30px'},500);
+
+			slideDivRemName = '#project'+slideNumber+' .projectimage';
+			$(slideDivRemName).delay(200).animate({opacity: '0', left: '-300px'},600);
+
+			slideDivRemName = '#project'+slideNumber+' .projectdetails';
+			$(slideDivRemName).delay(100).animate({opacity: '0', top: '-50px'},400);
+			//
+
+			slideDivAddName =  '#project'+(slideNumber+1)+' .projectHeading';
+			console.log("Coming>"+slideDivAddName);
+			$(slideDivAddName).animate({opacity: '0', top: '-30px'},0);
+			$(slideDivAddName).delay(800).animate({opacity: '1', top: '0px'},500);
+
+			slideDivAddName =  '#project'+(slideNumber+1)+' .projectimage';
+			$(slideDivAddName).animate({opacity: '0', left: '300px'},0);
+			$(slideDivAddName).delay(400).animate({opacity: '1', left: '0px'},800);
+
+			slideDivAddName =  '#project'+(slideNumber+1)+' .projectdetails';
+			$(slideDivAddName).animate({opacity: '0', top: '-50px'},0);
+			$(slideDivAddName).delay(800).animate({opacity: '1', top: '0px'},400);
+
+			slideDivAddName = "#project"+(slideNumber+1);
+			// formation
+			$(slideDivAddName).css("display", "block");
+
+			slideNumber = slideNumber+1;
+
+		}
+
+	}
+
+
+	function revers(){
+
+		if(slideNumber<=1)
+		{
+			
+			slideDivRemName = '#project'+slideNumber+' .projectHeading';
+			console.log("Going1>"+slideDivRemName);
+			//$(".projectHeading").animate({opacity: '0.1', left: '-300px'},3000);
+			$(slideDivRemName).animate({opacity: '0', top: '-30px'},500);
+
+			slideDivRemName = '#project'+slideNumber+' .projectimage';
+			$(slideDivRemName).delay(200).animate({opacity: '0', left: '400px'},600);
+
+			slideDivRemName = '#project'+slideNumber+' .projectdetails';
+			$(slideDivRemName).delay(100).animate({opacity: '0', top: '-50px'},400);
+			//
+
+			slideDivAddName =  '#project10'+' .projectHeading';
+			console.log("Coming2>"+slideDivAddName);
+			$(slideDivAddName).animate({opacity: '0', top: '-30px'},0);
+			$(slideDivAddName).delay(800).animate({opacity: '1', top: '0px'},500);
+
+			slideDivAddName =  '#project10'+' .projectimage';
+			$(slideDivAddName).animate({opacity: '0', left: '-400px'},0);
+			$(slideDivAddName).delay(400).animate({opacity: '1', left: '0px'},800);
+
+			slideDivAddName =  '#project10'+' .projectdetails';
+			$(slideDivAddName).animate({opacity: '0', top: '-50px'},0);
+			$(slideDivAddName).delay(800).animate({opacity: '1', top: '0px'},400);
+
+			slideDivAddName = "#project"+10;
+			// formation
+			$(slideDivAddName).css("display", "block");
+
+			slideNumber=10;
+		}
+		else
+		{
+
+			slideDivRemName = '#project'+slideNumber+' .projectHeading';
+			console.log("Going22>"+slideDivRemName);
+			//$(".projectHeading").animate({opacity: '0.1', left: '-300px'},3000);
+			$(slideDivRemName).animate({opacity: '0', top: '-30px'},500);
+
+			slideDivRemName = '#project'+slideNumber+' .projectimage';
+			$(slideDivRemName).delay(200).animate({opacity: '0', left: '400px'},600);
+
+			slideDivRemName = '#project'+slideNumber+' .projectdetails';
+			$(slideDivRemName).delay(100).animate({opacity: '0', top: '-50px'},400);
+			//
+
+			slideDivAddName =  '#project'+(slideNumber-1)+' .projectHeading';
+			console.log("Coming33>"+slideDivAddName);
+			$(slideDivAddName).animate({opacity: '0', top: '-30px'},0);
+			$(slideDivAddName).delay(800).animate({opacity: '1', top: '0px'},500);
+
+			slideDivAddName =  '#project'+(slideNumber-1)+' .projectimage';
+			$(slideDivAddName).animate({opacity: '0', left: '-400px'},0);
+			$(slideDivAddName).delay(400).animate({opacity: '1', left: '0px'},800);
+
+			slideDivAddName =  '#project'+(slideNumber-1)+' .projectdetails';
+			$(slideDivAddName).animate({opacity: '0', top: '-50px'},0);
+			$(slideDivAddName).delay(800).animate({opacity: '1', top: '0px'},400);
+
+			slideDivAddName = "#project"+(slideNumber-1);
+			// formation
+			$(slideDivAddName).css("display", "block");
+
+			slideNumber = slideNumber-1;
+
+		}
+}
+</script>
+
+<body>
+<div class="leftButton1 grayscale">
+	<a href="javascript:nextPrev(); " ><img src="images/work/Nextbutton.png" class="leftButton"></a>
+</div>
+<div class="rightButton1 grayscale">
+	<a href="javascript:revers();"><img src="images/work/Previous.png" class="rightButton"></a>
+</div>
+	<div class="aboutContent">
+		<div class="firstTab">
+
+			<nav class="nav">	
+				
+				<div class=" mainmenublog"><span class="left"><a href="home.html" class="mainmenu" >Home</a></span></div>
+				<div class="mainmenublog"><span class="left"><a href="work.html" class="mainmenu active">Works</a></span></div>
+				<div class="mainmenublog"><a href="home.html"><img src="images/work/translogo.png" class="logostyle"></a></div>
+				<div class="mainmenublog"><span class="right"><a href="about.html" class="mainmenu">About</a></span></div>
+				<div class="mainmenublog"><span class="right"><a href="contact.html" class="mainmenu">Contact</a></span></div>
+				
+			</nav>
+
+			<nav class="navnew" id="myTopnav">	
+            <div class="screen">
+              <div class="circle"></div>
+	            <div class="menuburger">
+	              <ul class="burgerUL">
+	                <li class="burgerLI"><a href="home.html" >Home</a></li>
+	                <li class="burgerLI"><a href="work.html" >Works</a></li>
+	                <li class="burgerLI"><a href="about.html" class="newlmink ">About</a></li>
+	                <li class="burgerLI"> <a href="contact.html" class="newmlink active">Contact</a></li>         
+	             </ul>
+            	</div>                  
+            	<div class="burger">
+            	  <div class="navBAAR">
+            	  <div class="x"></div>
+            	  <div class="y"></div>
+                  <div class="z"></div>
+                 </div> 
+            	</div>    
+			</div>
+			</nav>
+			<div class="navnewLOGO">
+					<a href="home.html"><img src="images/work/mobilelogo.jpg" ></a>
+				</div>
+			</div>
+				
+			<div class="projectHolder">
+				
+				<ul class="allworkUL">
+
+					<li class="allworkLI" style="display:none;" id="project1">
+						<div class="projectHeading">
+							<h2 class="tagline">Fyitv 18</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/desktop.png" class="workprojectimage">
+								  <ul class="firstUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-fyitv18-1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fyitv18-2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fyitv18-3.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fyitv18-1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fyitv18-2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fyitv18-3.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							<p>campaign microsite with dynamic Video</p>
+							<p><strong>Project Type&nbsp;:</strong>&nbsp;Responsive Website.</p>
+							<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+							<p><strong>Technologies&nbsp;:&nbsp;</strong>HTML,&nbsp;CSS3,&nbsp;</br>PHP,&nbsp;FFMPEG,&nbsp;MySQl.</p>
+					
+							<a href="https://www.fyitv18.com/AMA" target="_blank"><button class="button">View live site</button></a>
+						</div>
+					</li>
+
+					
+
+					<li class="allworkLI" style="display:none;" id="project2">
+						<div class="projectHeading">
+							<h2 class="tagline">Fitorto</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/android.png" class="workprojectimage">
+								  <ul class="firstandroidUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-fitorto1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fitorto2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fitorto3.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fitorto1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fitorto2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-fitorto3.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							
+							
+							<p> FiTORTO is an application for Fitness centers and their members. Fitorto is conscious effort to create the biggest fitness community which competes and grows together. </p>
+							<p><strong>Project Type&nbsp;:</strong>&nbsp;Mobile Application .</p>
+							<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+							<p><strong>Technologies&nbsp;:&nbsp;</strong>Android</p>
+							<p><strong>Agency&nbsp;:&nbsp;</strong> Fitorto Fitness Solution Private Limited </p>
+							
+							<a href="https://play.google.com/store/apps/details?id=com.ct.fitorto&hl=en" target="_blank"><button class="androidButton"></button></a>
+						</div>
+					</li>
+
+					<li class="allworkLI " style="display:none;"  id="project3">
+						<div class="projectHeading">
+							<h2 class="tagline">Blenders Pride Fashion Tour</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/desktop.png" class="workprojectimage">
+								  <ul class="firstUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-bpft1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-bpft2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-bpft1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-bpft2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-bpft1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-bpft2.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							
+							
+							<p>Fashion. Technology. Music. Fuse them into one mega-event and you get the Blenders Pride Fashion Tour 2015, featuring leading fashion designers, iconic musicians and some of the most stylish names of the day.</p>
+							<p><strong>Project Type&nbsp;:</strong>&nbsp;Responsive Website.</p>
+							<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+							<p><strong>Technologies&nbsp;:&nbsp;</strong>HTML&nbsp;,&nbsp;CSS3</p>
+						
+							
+							<a href="http://www.bpft.in/" target="_blank"><button class="button">View live site</button></a>
+						</div>
+					</li>
+					<li class="allworkLI " style="display:none;"  id="project4">
+					
+						<div class="projectHeading">
+							<h2 class="tagline">Box Nation Pocket Ko</h2>
+						</div>
+						<div class="projectimage">
+							<div >
+							  <img src="images/homepageSnap/appsturf-work-game1.png" class="workprojectimage">
+							</div>
+							
+						</div>
+						<div class="projectdetails">
+							
+							
+							<p> Box nation is iOS Game which will give participants the chance to lace up their interactive gloves, and punch their way to the top of the leader board as they challenge and random opponents in their quest to go from chump to champion.</p>
+							<p><strong>Project Type&nbsp;:</strong>&nbsp;GAMES .</p>
+							<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+							<p><strong>Technologies&nbsp;:&nbsp;</strong>iOS</p>
+							
+							<a href="https://itunes.apple.com/us/app/pocket-ko/id805594869?mt=8" target="_blank"><button class="iosButton"></button></a>
+						</div>
+					</li>	
+					
+					<li class="allworkLI" style="display:none;" id="project5">
+						
+						<div class="projectHeading">
+							<h2 class="tagline">VLink for Vserv</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/androidIOS.png" class="workprojectimage">
+								  <ul class="firstandroidUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-vlink1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-vlink2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-vlink1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-vlink2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-vlink1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-vlink2.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							<p>
+							Recognise & Appreciate your colleagues.
+							Get rewarded from your HOD/ manager/ peer for great work done.
+							Search and refer friends from your network for job openings at Vserv & earn points.
+							Get the latest news and updates</p>
+							<p><strong>Project Type&nbsp;:</strong>&nbsp;Mobile Application.</p>
+							<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+							<p><strong>Technologies&nbsp;:&nbsp;</strong>Android and iOS</p>
+							
+							<a href="https://play.google.com/store/apps/details?id=com.happy2refer.vserv&hl=en" target="_blank"><button class="androidButton"></button></a>
+							<a href="https://itunes.apple.com/us/app/vservu/id1056904582?ls=1&mt=8" target="_blank"><button class="iosButton"></button></a>
+						</div>
+					</li>
+
+					<li class="allworkLI" style="display:none;" id="project6">
+						<div class="projectHeading">
+							<h2 class="tagline">Faar Better Films</h2>
+						</div>
+						<div class="projectimage">					
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/desktop.png" class="workprojectimage">
+								  <ul class="firstUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-faarbetter1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-faarbetter2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-faarbetter1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-faarbetter2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-faarbetter1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-faarbetter2.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						
+						<div class="projectdetails">
+							
+							
+							<p >A Production House primarily producing content for Films and Television. a Faar Better place to make the most challenging ideas & Concepts with determination and absolution.</p>
+
+							<p><strong>Project Type&nbsp;:</strong>&nbsp;Responsive Website.</p>
+							<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+							<p><strong>Technologies&nbsp;:&nbsp;</strong>HTML&nbsp;,&nbsp;CSS3.</p>
+							
+							<a href="http://faarbetterfilms.com/" target="_blank"><button class="button">View live site</button></a>
+						</div>
+
+					</li>
+
+					<li class="allworkLI" style="display:none;" id="project7">
+						<div class="projectHeading">
+							<h2 class="tagline">Happy2Refer</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/androidIOS.png" class="workprojectimage">
+								  <ul class="firstandroidUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-happy2refer1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-happy2refer2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-happy2refer1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-happy2refer2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-happy2refer1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-happy2refer2.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							
+							
+							<p> Happy2refer is an job referral app. 
+							It allows employees to refer connections for open jobs at their organizations.</p>
+							<p><strong>Project Type&nbsp;:</strong>&nbsp;Mobile Application .</p>
+							<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+							<p><strong>Technologies&nbsp;:&nbsp;</strong>ios & android</p>
+							<p><strong>Agency&nbsp;:&nbsp;</strong> Ideas Unplugged Technologies Private Limited </p>
+							
+							<a href="https://play.google.com/store/apps/details?id=com.happy2refer.common.prod&hl=en" target="_blank"><button class="androidButton"></button></a>
+							<a href="https://itunes.apple.com/in/app/happy2refer/id1036736624?mt=8" target="_blank"><button class="iosButton"></button></a>
+						</div>
+					</li>
+
+					<!-- <li class="allworkLI" style="display:none;" id="project8">
+						<div class="projectHeading">
+							<h2 class="tagline">Rock A Byte</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/androidIOS.png" class="workprojectimage">
+								  <ul class="firstandroidUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-rockabyte1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-rockabyte2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-rockabyte1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-rockabyte2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-rockabyte1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-rockabyte2.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							
+							
+								<p>Rockabyte is an entertainment app It's a unique interactive platform for
+							every individual to promote them self
+							in the eyes of the world .
+							</p>
+						<p><strong>Project Type&nbsp;:</strong>&nbsp;Mobile Application.</p>
+						<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+						<p><strong>Technologies&nbsp;:&nbsp;</strong>Android and iOS</p>
+						
+						<a href="https://play.google.com/store/apps/details?id=com.gss.rockabyte.login&hl=en" target="_blank"><button class="androidButton"></button></a>
+						<a href="https://itunes.apple.com/in/app/rockabyte/id1068986999?mt=8" target="_blank"><button class="iosButton"></button></a>
+						</div>
+					</li> -->
+
+					<li class="allworkLI" style="display:none;" id="project8">
+						<div class="projectHeading">
+							<h2 class="tagline">The Pure Concept</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/desktop.png" class="workprojectimage">
+								  <ul class="firstUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-thepureconcept1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-thepureconcept2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-thepureconcept3.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-thepureconcept1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-thepureconcept2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-thepureconcept3.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							<p>The Pure Concept has excelled in the textiles industry, continually growing as a well-known domestic and international brand.</p>
+							<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+							<p><strong>Technologies&nbsp;:&nbsp;</strong>HTML,&nbsp;CSS3</p>
+							<a href="http://thepureconcept.co.in/index.php" target="_blank"><button class="button">View live site</button></a>
+						</div>
+					</li>
+
+					<li class="allworkLI" style="display:none;" id="project9">
+						<div class="projectHeading">
+							<h2 class="tagline">First Choice</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/android.png" class="workprojectimage">
+								  <ul class="firstandroidUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-firstchoice1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-firstchoice2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-firstchoice3.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-firstchoice1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-firstchoice2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-firstchoice3.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							<p>First Choice is official mobile application of Mahindra First Choice Services that provides 360 view about your vehicle service needs.
+							</p>
+						<p><strong>Project Type&nbsp;:</strong>&nbsp;Mobile Application.</p>
+						<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+						<p><strong>Technologies&nbsp;:&nbsp;</strong>Android</p>
+						
+						<a href="https://play.google.com/store/apps/details?id=appoids.mfcsl.cis" target="_blank"><button class="androidButton"></button></a>
+						</div>
+					</li>
+
+					<!-- <li class="allworkLI" style="display:none;" id="project11">
+						<div class="projectHeading">
+							<h2 class="tagline">OORJA</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/android.png" class="workprojectimage">
+								  <ul class="firstandroidUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-oorja1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-oorja2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-oorja3.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-oorja1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-oorja2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-oorja3.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+							<p>Oorja is an B2B app for their customer (hotels) which uses their product( stoves).It provides current grocery item prices, according to markets in limited states.</p>
+					<p><strong>Project Type&nbsp;:</strong>&nbsp;Mobile Application.</p>
+					<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+					<p><strong>Technologies&nbsp;:&nbsp;</strong>Android</p>
+					<button class="offline-button">BETA</button>
+						</div>
+					</li> -->
+
+					<li class="allworkLI" style="display:none;" id="project10">
+						<div class="projectHeading">
+							<h2 class="tagline">Screen Saviour</h2>
+						</div>
+						<div class="projectimage">
+							<div class="firstslider">
+								  <img  src="images/homepageSnap/android.png" class="workprojectimage">
+								  <ul class="firstandroidUL ">
+								  <div class="css-carousel">
+								  	<li class="firstLI">
+								  		<img src="images/homepageSnap/appsturf-work-screen1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-screen2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-screen3.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-screen1.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-screen2.png" class="sliderIMG css-img">
+								  		<img src="images/homepageSnap/appsturf-work-screen3.png" class="sliderIMG css-img">
+								  	</li>
+								  	</div>
+								  </ul>	
+							</div>
+						</div>
+						<div class="projectdetails">
+						<p><strong>Project Type&nbsp;:</strong>&nbsp;Mobile Application.</p>
+					<p><strong>Role&nbsp;:&nbsp;</strong>Development</p>
+					<p><strong>Technologies&nbsp;:&nbsp;</strong>Android</p>
+					
+					<button class="offline-button">BETA</button>
+						</div>
+					</li>
+	
+				</ul>		
+					
+				
+			</div>
+			
+			
+			
+				<hr class="fullline">
+				<div class="fifthTab"> 
+					<div class="follow">
+						<!-- <hr class="line"> -->
+						<h2>BE SOCIAL WITH US</h2>
+						<div class="socialMedia">
+							<div class="sociaTab">
+								<a href="https://www.facebook.com/appsturf" target="_blank" class="socialA"><img src="images/work/fb.png" class="faceTwittGoog"></a>
+								<h3 class="patnerHR">facebook</h3>
+							</div>
+							<div class="sociaTab">
+								<a href="https://plus.google.com/106803749715716637707" target="_blank" class="socialA"><img src="images/work/gp.png" class="faceTwittGoog"></a>
+								<h3 class="patnerHR">Google</h3>
+							</div>
+							<div class="sociaTab">
+								<a href="https://twitter.com/appsturf" target="_blank" class="socialA"><img src="images/work/tw.png" class="faceTwittGoog"></a>
+								<h3 class="patnerHR">Twitter</h3>
+							</div>
+
+						</div>
+					</div>    
+				</div>
+				<hr class="fullline">
+				<div class="footer">
+					<div class="footercontent">
+						<p class="footerstyle">&copy; 2016 Appsturf Technologies Pvt Ltd </p>
+					</div>
+				</div>
+
+
+		</div>	
+<!-- 		<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {myIndex = 1}
+		    x[myIndex-1].style.display = "block";
+		    setTimeout(carousel, 5000); // Change image every 2 seconds
+		}
+		</script> -->
+
+						<!-- ------google-analytics---- -->
+
+		 <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-78916637-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script> 
+		
+	</body>
+
+	<script type="text/javascript">
+if( 'ontouchstart' in window ){ var click = 'touchstart'; }
+  else { var click = 'click'; }
+
+
+  $('div.burger').on(click, function(){
+
+      if( !$(this).hasClass('open') ){ openMenu(); } 
+      else { closeMenu(); }
+
+  });
+    
+
+
+  function openMenu(){
+    
+    $('div.circle').addClass('expand');
+          
+    $('div.burger').addClass('open'); 
+    $('div.x, div.y, div.z').addClass('collapse');
+    $('.menuburger li').addClass('animate');
+    
+    setTimeout(function(){ 
+      $('div.y').hide(); 
+      $('div.x').addClass('rotate30'); 
+      $('div.z').addClass('rotate150'); 
+    }, 70);
+    setTimeout(function(){
+      $('div.x').addClass('rotate45'); 
+      $('div.z').addClass('rotate135');  
+    }, 120);
+    
+    
+
+  }
+  
+  function closeMenu(){
+
+    $('div.burger').removeClass('open');  
+    $('div.x').removeClass('rotate45').addClass('rotate30'); 
+    $('div.z').removeClass('rotate135').addClass('rotate150');        
+    $('div.circle').removeClass('expand');
+    $('.menuburger li').removeClass('animate');
+    
+    setTimeout(function(){      
+      $('div.x').removeClass('rotate30'); 
+      $('div.z').removeClass('rotate150');      
+    }, 50);
+    setTimeout(function(){
+      $('div.y').show(); 
+      $('div.x, div.y, div.z').removeClass('collapse');
+    }, 70);                         
+    
+  }
+</script>
+</html>
